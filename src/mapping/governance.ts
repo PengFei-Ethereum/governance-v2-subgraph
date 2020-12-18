@@ -79,7 +79,6 @@ export function handleProposalCreated(event: ProposalCreated): void {
   proposal.governanceStrategy = event.params.strategy;
   proposal.ipfsHash = hash;
   proposal.winner = NA;
-  // dont have access to event.block, not sure why
   proposal.lastUpdateBlock = event.block.number;
   proposal.createdTimestamp = event.block.timestamp.toI32();
   proposal.lastUpdateTimestamp = event.block.timestamp.toI32();
